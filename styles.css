@@ -1,0 +1,160 @@
+:root {
+    --main-color: #C55E22;
+    --book-complete-color: #22C55E;
+    --book-incomplete-color: #9CA3AF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+
+    margin: 0;
+    color: #fff;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+    margin: 0.5rem;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 2rem;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header {
+    background-color: var(--main-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.btn-add-book {
+    border-radius: 100%;
+    border: none;
+
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.book-card {
+    border-radius: 1rem;
+    padding: 1rem;
+    height: fit-content;
+    max-height: 500px;
+    background-color: var(--book-incomplete-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.complete {
+    background-color: var(--book-complete-color);
+}
+
+.text {
+    overflow: auto;
+}
+
+.book-card-controls {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.book-card-controls button {
+    background: none;
+}
+
+.modal-form[open] {
+    padding: 2rem;
+    border-color: var(--main-color);
+}
+
+form {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 1rem;
+}
+
+.checkbox-label, .btns-form {
+    grid-column-start: 2;
+}
+
+label {
+    text-align: right;
+}
+
+input {
+    height: 2rem;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea {
+    min-height: 200px;
+    padding: 0.5rem;
+    resize: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35%;
+    height: 2.7rem;
+}
