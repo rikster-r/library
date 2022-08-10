@@ -2,70 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo-container inline">
-            <img src="icons/logo.svg" alt="logo" class="logo">
-            <h1>Library</h1>
-        </div>
-
-        <a href="https://github.com/rikster-r/library">&copy; 2022 rikster-r</a>
-    </header>
-
-    <div class="books-container" data-books-container>
-        <div class="book-card" data-card-num="0">
-            <div class="text">
-                <h2>Harry Potter</h2>
-                <p>Author: Joan Rowling</p>
-                <p>Pages Count: 348</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum iure maxime obcaecati!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur molestias, rerum dolorum quas
-                    similique, fugit quod quae enim maxime ex ab doloremque vero voluptate perferendis nobis sit,
-                    quaerat aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat obcaecati saepe repellat possimus, maiores eveniet quisquam voluptate iure asperiores quam labore magni qui. Commodi distinctio et quam nulla, consequuntur facere!</p>
-            </div>
-
-            <div class="book-card-controls">
-                <button type="button" data-change-status><img src="icons/book-check.svg" alt=""></button>
-                <button type="button" data-remove-book><img src="icons/remove.svg" alt=""></button>
-            </div>
-        </div>
+  <header>
+    <div class="logo-container inline">
+      <img src="icons/logo.svg" alt="logo" class="logo">
+      <h1>Library</h1>
     </div>
 
-    <button type="button" class="btn-add-book" data-open-form><img src="icons/book-plus.svg" alt="add book"></button>
+    <a href="https://github.com/rikster-r/library">&copy; 2022 rikster-r</a>
+  </header>
 
-    <dialog class="modal-form" data-modal>
-        <form action="#" method="dialog" data-form>
-            <label for="title">*Title</label>
-            <input type="text" name="title" id="title" data-form-input required>
+  <div class="books-container" data-books-container>
+    <div class="book-card">
+      <div class="text">
+        <h2>Harry Potter</h2>
+        <p>Author: Joan Rowling</p>
+        <p>Pages Count: 348</p>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum iure maxime obcaecati!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic pariatur molestias, rerum dolorum quas
+          similique, fugit quod quae enim maxime ex ab doloremque vero voluptate perferendis nobis sit,
+          quaerat aspernatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat obcaecati saepe repellat
+          possimus, maiores eveniet quisquam voluptate iure asperiores quam labore magni qui. Commodi distinctio et quam
+          nulla, consequuntur facere!</p>
+      </div>
 
-            <label for="author">*Author</label>
-            <input type="text" name="author" id="author" data-form-input required>
+      <div class="book-card-controls inline">
+        <button type="button" data-change-status><img src="icons/book-check.svg" alt=""></button>
+        <button type="button" data-remove-book><img src="icons/remove.svg" alt=""></button>
+      </div>
+    </div>
+  </div>
 
-            <label for="pages-count">*Pages Count</label>
-            <input type="number" name="pagesCount" id="pages-count" data-form-input required>
+  <button type="button" class="btn-add-book" data-open-form><img src="icons/book-plus.svg" alt="add book"></button>
 
-            <label for="comment">Comment</label>
-            <textarea name="comment" id="comment" cols="30" data-form-input></textarea>
+  <dialog class="modal-form" data-modal>
+    <form action="#" method="dialog" data-form>
+      <label for="title">*Title</label>
+      <input type="text" name="title" id="title" data-form-input required>
 
-            <label for="readBook" class="checkbox-label inline">
-                <input type="checkbox" name="readBook" id="read-book" data-form-input>
-                <span>I have completed this book</span>
-            </label>
+      <label for="author">*Author</label>
+      <input type="text" name="author" id="author" data-form-input required>
 
-            <div class="btns-form inline">
-                <button type="submit" class="btn-form">Submit</button>
-                <button type="button" class="btn-form" data-close-form>Cancel</button>
-            </div>
-        </form>
-    </dialog>
+      <label for="pages-count">*Pages Count</label>
+      <input type="number" name="pagesCount" id="pages-count" data-form-input required>
+
+      <label for="comment">Comment</label>
+      <textarea name="comment" id="comment" cols="30" data-form-input></textarea>
+
+      <label for="readBook" class="checkbox-label inline">
+        <input type="checkbox" name="readBook" id="read-book" value="1" data-form-input>
+        <span>I have completed this book</span>
+        <input type="hidden" name="readBook" value="0">
+      </label>
+      
+      <div class="btns-form inline">
+        <button type="submit" class="btn-form">Submit</button>
+        <button type="button" class="btn-form" data-close-form>Cancel</button>
+      </div>
+    </form>
+  </dialog>
 </body>
 
 </html>
