@@ -149,6 +149,8 @@ input {
   padding: 0.5rem;
   font-family: inherit;
   font-size: inherit;
+
+  outline-color:#00f;
 }
 
 textarea {
@@ -157,6 +159,8 @@ textarea {
   resize: none;
   font-family: inherit;
   font-size: inherit;
+
+  outline-color: #00f
 }
 
 .btns-form {
